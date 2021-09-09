@@ -1,0 +1,75 @@
+@import "../../assets/styles/_mixins.scss";
+@import "../../assets/styles/_variables.scss";
+
+.contacthome {
+  background-color: $brown-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 100px;
+
+  @include atLgScreen {
+    display: list-item;
+    padding: 30px 0;
+  }
+}
+
+.contacthome__description {
+  background-color: $main-white;
+  padding: 50px;
+  height: 30rem;
+  width: 40%;
+
+  & h1 {
+    font-size: 25pt;
+  }
+  & h2 {
+    font-size: 18pt;
+  }
+  & p {
+    font-size: 14pt;
+  }
+  & hr {
+    width: 50%;
+  }
+
+  @include atLgScreen {
+    width: 90%;
+    margin: auto;
+    height: max-content;
+  }
+}
+
+.contacthome__form {
+  background-color: $main-white;
+  padding: 50px;
+  height: 30rem;
+  width: 40%;
+  text-align: center;
+
+  @include atLgScreen {
+    width: 90%;
+    margin: auto;
+    height: max-content;
+    margin-top: 20px;
+  }
+
+  & h1 {
+    font-size: 25pt;
+  }
+
+  & input,
+  textarea {
+    width: 80%;
+    margin: auto;
+    padding: 4px 20px;
+    margin: 10px;
+
+    @include atLgScreen {
+      width: 100%;
+      padding: 5px 20px;
+      margin: 5px 0;
+    }
+  }
+}

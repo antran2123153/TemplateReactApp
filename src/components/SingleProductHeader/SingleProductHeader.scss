@@ -1,0 +1,81 @@
+@import "../../assets/styles/_mixins.scss";
+@import "../../assets/styles/variables";
+
+.singleproduct__header {
+  background-color: $bg-grey;
+  padding-top: 30px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-router {
+      & a {
+        color: $primary-color;
+      }
+      @include atLgScreen {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-icon {
+      margin-left: 20px;
+      font-size: 15pt;
+
+      @include atLgScreen {
+        display: none;
+      }
+    }
+  }
+
+  &__bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    @include atLgScreen {
+      padding: 5px 0;
+    }
+
+    & span:nth-child(2) {
+      @include atLgScreen {
+        display: none;
+      }
+    }
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include atLgScreen {
+      align-items: baseline;
+    }
+
+    &-price {
+      @include atLgScreen {
+        margin-top: 10px;
+      }
+    }
+
+    &-name-icon1 {
+      font-size: 10pt;
+      color: rgb(255, 255, 255);
+      background-color: rgb(216, 224, 3);
+      padding: 3px 6px;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+
+    &-name-icon2 {
+      font-size: 10pt;
+      color: rgb(255, 255, 255);
+      background-color: rgb(73, 224, 3);
+      padding: 3px 6px;
+      border-radius: 3px;
+    }
+  }
+}

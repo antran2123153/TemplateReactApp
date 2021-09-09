@@ -1,0 +1,78 @@
+@import "assets/styles/_mixins.scss";
+@import "assets/styles/_variables.scss";
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background-color: $main-white;
+}
+
+.navbar {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: xx-large;
+  font-weight: 700;
+  color: $primary-color;
+
+  @include atLgScreen {
+    font-size: large;
+  }
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+
+  @include atLgScreen {
+    display: none;
+  }
+}
+
+.navbar__link {
+  margin: 0 10px;
+}
+
+.navbar__icons {
+  margin: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.navbar__btn {
+  padding: 5px 20px;
+}
+
+.navbar__menu-icon {
+  display: none;
+
+  @include atLgScreen {
+    display: flex;
+  }
+}
+
+.navbar__hiden {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  padding: 0;
+  display: block;
+  background-color: $main-white;
+  height: max-content;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  &__link {
+    font-weight: 400;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 7px 30px;
+  }
+}

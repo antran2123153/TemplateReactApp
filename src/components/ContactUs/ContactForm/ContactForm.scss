@@ -1,0 +1,30 @@
+@import "../../../assets/styles/_mixins.scss";
+@import "../../../assets/styles/variables";
+
+.contact-form {
+  background: $bg-grey;
+  padding: 1rem;
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 5px 10px;
+    display: inline-block;
+    &:nth-child(1) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__message {
+    width: 100%;
+    padding: 5px 10px;
+  }
+}
